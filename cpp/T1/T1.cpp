@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 using namespace std;
 
 double FExact(const double x, const int m)
@@ -61,24 +60,32 @@ void calculateDifferences(const int arraysSize, double exactValues[], double dec
     }
 }
 
+void printArrayValues(const int arraysSize, double values[])
+{
+    for (int i = 0; i < arraysSize; i++)
+    {
+        cout << values[i] << endl;
+    }
+}
+
 int main()
 {
     const int arraysSize = 19;
     const int m = -4;
     double exactValues[arraysSize];
     double decompositionValues[arraysSize];
-    initArraysWithFunctionValues(m, exactValues, decompositionValues);
     double differences[arraysSize];
+
+    initArraysWithFunctionValues(m, exactValues, decompositionValues);
     calculateDifferences(arraysSize, exactValues, decompositionValues, differences);
 
-    std::cout << std::setfill(' ') << std::setw(20) << "exact" << ' ';
-    std::cout << std::setfill(' ') << std::setw(20) << "decomposition" << ' ';
-    std::cout << std::setfill(' ') << std::setw(20) << "difference" << std::endl;
-
-    for (int i = 0; i < arraysSize; i++)
-    {
-        std::cout << std::setfill(' ') << std::setw(20) << exactValues[i] << ' ';
-        std::cout << std::setfill(' ') << std::setw(20) << decompositionValues[i] << ' ';
-        std::cout << std::setfill(' ') << std::setw(20) << differences[i] << std::endl;
-    }
+    cout << "exact" << endl;
+    printArrayValues(arraysSize, exactValues);
+    cout << endl;
+    cout << "decomposition" << endl;
+    printArrayValues(arraysSize, decompositionValues);
+    cout << endl;
+    cout << "difference" << endl;
+    printArrayValues(arraysSize, differences);
+    cout << endl;
 }
