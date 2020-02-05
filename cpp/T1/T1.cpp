@@ -6,10 +6,20 @@ using namespace std;
 double FExact(const double x, const int m)
 {
     double initialExpression = 1 + x;
-    double resultAccumulator = initialExpression;
-    for (int i = 1; i < m; i++)
+    double resultAccumulator = 1;
+    if (m > 0)
     {
-        resultAccumulator *= initialExpression;
+        for (int i = 0; i < m; i++)
+        {
+            resultAccumulator *= initialExpression;
+        }
+    }
+    else if (m < 0)
+    {
+        for (int i = 0; i > m; i--)
+        {
+            resultAccumulator /= initialExpression;
+        }
     }
     return resultAccumulator;
 }
