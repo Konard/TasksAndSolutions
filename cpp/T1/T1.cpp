@@ -35,7 +35,7 @@ double FDecomposition(const double x, const double m, const int maxN = 7)
     for (int n = 1; n <= maxN; n++)
     {
         numeratorAccumulator *= x;
-        numeratorAccumulator *= (m + n - 1.0);
+        numeratorAccumulator *= (-m + n - 1.0);
         denominatorAccumulator *= n;
         signModifier *= initialSignModifier;
         resultAccumulator += signModifier * (numeratorAccumulator / denominatorAccumulator);
