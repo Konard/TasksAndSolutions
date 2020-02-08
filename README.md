@@ -1,5 +1,5 @@
 # TasksAndSolutions
-Collection of example of tasks and their solutions.
+Collection of example tasks and their solutions.
 
 | Tasks         | Solutions |
 | ------------- | --------- |
