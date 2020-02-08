@@ -1,16 +1,3 @@
-# Task 3
-
-## Description
-
-![Description](3_description.png)
-
-Дано число записано цифрами восьмеричной системы -72_8. Записать дополнительный
-двоичный код этого числа в формате short int. Получить его десятичный и
-шестнадцатеричный эквивалент. Показать все промежуточные вычисления.
-
-## Solution
-
-```C++
 #include <iostream>
 using namespace std;
 
@@ -65,11 +52,3 @@ int main()
     printHex(n);
     cout << " in base-16." << endl;
 }
-
-```
-
-[Compile and run solution #1 on Repl.it](https://repl.it/@Konard/Task31)
-
-## Screenshot
-
-![Screenshot 1 for solution 1](3_screenshot_1_1.png)
