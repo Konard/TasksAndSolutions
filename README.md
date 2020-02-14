@@ -6,4 +6,4 @@ Collection of example tasks and their solutions.
 | [1](1.md)     | 2         |
 | [2](2.md)     | 1         |
 | [3](3.md)     | 1         |
-| [4](4.md)     | 0         |
+| [4](4.md)     | 1         |
